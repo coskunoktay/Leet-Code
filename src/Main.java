@@ -3,10 +3,11 @@ import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
+
         
     }
 
-        //TODO sum of digits of a given random number
+        //TODO 1-)sum of digits of a given random number
     private static void sumOfNumbers(int randomNumber) {
         //int randomSayi = (int)(Math.random()*(1000)); //Returns a random number from 0 to 100
         System.out.println("random sayi " + randomNumber); //we printed the generated number to the console
@@ -21,7 +22,7 @@ public class Main {
     }
 
 
-        //TODO In this problem, we have to find a pair of two distinct indices in a sorted array that
+        //TODO 2-)In this problem, we have to find a pair of two distinct indices in a sorted array that
         // their values add up to a given target. We can assume that the array has only one pair of integers that add up to the target sum.
         // Note that the array is sorted in a non-decreasing manner.
     public static int[] twoSum(int[] nums, int target) {
@@ -40,18 +41,18 @@ public class Main {
         }
         return new int[]{-1, -1};
     }
-        //TODO  Words that read the same backwards are called palindromic words.
+        //TODO  3-)Words that read the same backwards are called palindromic words.
         //    Write the java algorithm code that gives whether a word or sentence entered from the console is palindromic?
 
     public static boolean isPalindromicWord(String word) {
         //input
         //System.out.println(isPalindromicWord("madam"));//true
         //System.out.println(isPalindromicWord("oktay"));//false
-        String reverseWord = "";
+        StringBuilder reverseWord = new StringBuilder();
         int length = word.length();
         for (int i = 0; i < length; i++) {
-            reverseWord += word.charAt(length - 1 - i);
+            reverseWord.append(word.charAt(length - 1 - i));
         }
-        return word.equals(reverseWord);
+        return word.equals(reverseWord.toString());
     }
 }
