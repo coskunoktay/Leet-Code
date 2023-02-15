@@ -6,21 +6,27 @@ public class Main {
         
     }
 
-    private static void basamaklarınToplamı(int randomSayi) {
-        //int randomSayi = (int)(Math.random()*(1000)); //0 ile 1000 arasında sayı
-        System.out.println("random sayi " + randomSayi); //üretilen sayıyı konsola bastırdık
-        int birler = randomSayi %10; //birler basamağı
+        //TODO sum of digits of a given random number
+    private static void sumOfNumbers(int randomNumber) {
+        //int randomSayi = (int)(Math.random()*(1000)); //Returns a random number from 0 to 100
+        System.out.println("random sayi " + randomNumber); //we printed the generated number to the console
+        int ones = randomNumber %10; //ones digit
 
-        randomSayi = randomSayi /10;
-        int onlar = randomSayi %10;   //onlar basamağı
+        randomNumber = randomNumber /10;
+        int tens = randomNumber %10;   //tens digit
 
-        int yuzler = randomSayi /10;  //yüzler basamağı
+        int hundreds = randomNumber /10;  //hundreds digit
 
-        System.out.println("Toplamları ="+(birler+onlar+yuzler));
+        System.out.println("Totals ="+(ones+tens+hundreds));
     }
 
+
+        //TODO In this problem, we have to find a pair of two distinct indices in a sorted array that
+        // their values add up to a given target. We can assume that the array has only one pair of integers that add up to the target sum.
+        // Note that the array is sorted in a non-decreasing manner.
     public static int[] twoSum(int[] nums, int target) {
-        //input
+
+//        input
 //        int[] a = {3, 4,5,6};
 //        int[] ints = twoSum(a, 18);
 //        System.out.println(Arrays.toString(ints));
@@ -34,13 +40,13 @@ public class Main {
         }
         return new int[]{-1, -1};
     }
-//    Terstende aynı okunan kelimelere palindromik kelime denilmektedir.
-//    Konsoldan girilen bir kelime veya cümlenin polindromik olup olmadığını veren java algoritma kodunu yazınız ?
+        //TODO  Words that read the same backwards are called palindromic words.
+        //    Write the java algorithm code that gives whether a word or sentence entered from the console is palindromic?
 
-    public static boolean isPolindormikWord(String word) {
+    public static boolean isPalindromicWord(String word) {
         //input
-        //System.out.println(isPolindormikWord("madam"));//true
-        //System.out.println(isPolindormikWord("oktay"));//false
+        //System.out.println(isPalindromicWord("madam"));//true
+        //System.out.println(isPalindromicWord("oktay"));//false
         String reverseWord = "";
         int length = word.length();
         for (int i = 0; i < length; i++) {
